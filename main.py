@@ -1,4 +1,5 @@
 from grid import grid
+from square import square
 import numpy as np
 
 grid = grid()
