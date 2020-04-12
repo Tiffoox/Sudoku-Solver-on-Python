@@ -3,7 +3,7 @@ import numpy as np
 def grid():
     #Give first grid values
 
-    blank = np.NaN
+    blank = ""
 
     top_left = ((5, 3, blank), (6, blank, blank), (blank, 9, 8))
     top_center = ((blank, 7, blank), (1, 9, 5), (blank, blank, blank))
