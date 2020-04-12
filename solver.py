@@ -27,3 +27,4 @@ def solver(grid):
                     grid[index_row, index_column] = possible_numbers[0]
 
         empty_cell = 0 in grid
+    return None
