@@ -1,4 +1,4 @@
-from square import square
+from mysite.main.solver.square import square
 import numpy as np
 def solver(grid):
     empty_cell = True

@@ -1,7 +1,6 @@
 from grid import grid
-from solver import solver
-from show_grid import show_grid
-import numpy as np
+from mysite.main.solver.solver import solver
+from mysite.main.solver.show_grid import show_grid
 
 grid = grid()
 
