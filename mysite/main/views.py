@@ -4,6 +4,7 @@ from .solver.grid import grid
 from .solver.solver import solver
 import pandas as pd
 
+
 initial_grid = grid()
 solved_grid = solver(initial_grid)
 
@@ -11,6 +12,7 @@ solved_grid = solver(initial_grid)
 
 # def index(response):
 # 	return render(response, "main/base.html", {})
+
 
 def home(response):
     return render(response, 'main/home.html', {"grid": initial_grid})
@@ -20,3 +22,6 @@ def new_game(response):
 
 def previous_games(response):
     return render(response, 'main/previous_games.html', {"grid": solved_grid})
+
+def profile(response):
+    return render(response, 'main/profile.html', {})

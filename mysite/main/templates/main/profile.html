@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+
+{% block title %} Home page {% endblock %}
+{% block content %}
+     <h3>{{request.user.username}}</h3>
+    <div>
+        <ul>
+            <li>
+                <p> Email : {{request.user.email}} </p>
+            </li>
+            <li>
+                <p> Password : {{request.user.password1}} </p>
+            </li>
+
+            <form action="/logout">
+                <button type="submit" class="btn btn-success">
+                    <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;
+                    Logout
+                </button>
+            </form>
+        </ul>
+
+    </div>
+
+
+{% endblock %}

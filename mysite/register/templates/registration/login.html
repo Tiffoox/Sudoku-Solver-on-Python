@@ -11,7 +11,15 @@ Login Here
      <form method="post" class="from-group">
 	{% csrf_token %}
 	{{form|crispy}}
-	<p>Don't have an accoount? Create one <a href="/register">here</a></p>
-	<button type="submit" class="btn btn-success">Login</button>	
+	<p>Don't have an accoount? Create one
+		<a href="/register">
+			here
+			<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+		</a></p>
+	<button type="submit" class="btn btn-success">
+		<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
+		Login
+	</button>
+
     </form>
 {% endblock %}
