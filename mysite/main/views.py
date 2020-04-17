@@ -8,13 +8,15 @@ initial_grid = grid()
 solved_grid = solver(initial_grid)
 
 # Create your views here.
-def new_game(response):
-    return render(response, 'main/new_game.html', {"grid": initial_grid})
+
 # def index(response):
 # 	return render(response, "main/base.html", {})
 
 def home(response):
     return render(response, 'main/home.html', {"grid": initial_grid})
 
-def solved(response):
-    return render(response, 'main/solved.html', {"grid": solved_grid})
+def new_game(response):
+    return render(response, 'main/new_game.html', {"grid": initial_grid})
+
+def previous_games(response):
+    return render(response, 'main/previous_games.html', {"grid": solved_grid})
