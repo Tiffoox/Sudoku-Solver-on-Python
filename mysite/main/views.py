@@ -15,6 +15,7 @@ solved_grid = solver(initial_grid)
 
 
 def home(response):
+    x = ''
     return render(response, 'main/home.html', {"grid": initial_grid})
 
 def new_game(response):
