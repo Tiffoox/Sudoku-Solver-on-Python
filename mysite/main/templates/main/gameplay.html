@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  margin:1em auto;
+     }
+     td {
+       height:30px;
+       width:30px;
+       border:1px solid;
+       text-align:center;
+     }
+     td:first-child {
+       border-left:solid;
+     }
+     td:nth-child(3n) {
+       border-right:solid ;
+     }
+          tr:first-child {
+       border-top:solid;
+     }
+     tr:nth-child(3n) td {
+       border-bottom:solid ;
+     }
+
+</style>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% extends 'main/base.html' %}
+
+{% block title %} Game {% endblock %}
+{% block content %}
+<h3>Game </h3>
+
+<table class="w3-table-all w3-centered" width="500px" height="500px">
+     <caption> Sudoku number 0 </caption>
+       {% for row in grid %}
+       <tr>
+       {% for column in row %}
+            <td width="(100/9)%" height="(100/9)%">
+            {% if column == 0 %}
+               <span style="font-size:30px; font-weight:bold">
+                    <input id="{{column}}{{row}}" type="text" name="{{column}}{{row}}"  class="square" maxlength="1" size="1" style="text-align:center;">
+               </span>
+            {% else %}
+                 <span style="font-size:30px; font-weight:bold">
+                    {{column}}
+                 </span>
+<!--                <input id="{{column}}{{row}}" type="text" name="{{column}}{{row}}"  class="square" maxlength="1" size="1" value="{{column}}">-->
+            </td>
+            {% endif %}
+       {% endfor %}
+       </tr>
+       {% endfor %}
+</table>
+
+{% endblock %}
+</html>

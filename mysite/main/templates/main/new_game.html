@@ -2,5 +2,23 @@
 
 {% block title %} New game {% endblock %}
 {% block content %}
-     <h3> Play new game </h3>
+
+     <div style="width:500px;" class="w3-show-inline-block">
+          <div style="float: left; width: 130px">
+               <form  action="/gameplay">
+                    <button type="sumbit" class="btn btn-primary btn-lg">
+                         <span class="glyphicon glyphicon-play" aria-hidden="true"></span>&nbsp;
+                         New Game
+                    </button>
+               </form>
+          </div>
+          <div style="float: right; width: 130px">
+               <form action ="/previous_games">
+                    <button type="submit" class="btn btn-secondary btn-lg">
+                         <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp;
+                         Continue
+                    </button>
+               </form>
+          </div>
+     </div>
 {% endblock %}

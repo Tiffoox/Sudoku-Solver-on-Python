@@ -6,7 +6,7 @@
 	<style type="text/css">
 		.sidenav {
 			height:100%;
-			width:160px;
+			width:200px;
 			position: fixed;
 			z-index:1;
 			top:0;
@@ -17,7 +17,7 @@
 		}
 
 		.sidenav a {
-			padding:20px 8px 24px 8px;
+			padding:20px 8px 40px 0px;
 			text-decoration: none;
 			font-size:20px;
 			color: #818181;
@@ -55,50 +55,53 @@
 </head>
 {% load static %}
 
+<!-- sidenav and navbar navbar-default-->
 <nav class="sidenav">
-
-	<!-- Header -->
-	<div class="navbar-header">
-		<button type ="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
-		<a class="navbar brand" href="/home">Sudoku Solver</a>
-	</div>
-	<!-- Items -->
-	<div id="topNavBar">
-		<ul class="nav navbar-nav">
-			<li class="active">
-				<a href="/new_game">
-					<span class="glyphicon glyphicon-play" aria-hidden="true"></span>&nbsp;
-						New game
-				</a>
-			</li>
-			<li class="">
-				<a href="/previous_games">
-					<span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp;
-					Previous games
-				</a>
-			</li>
-			{% if user.is_authenticated %}
-			<li class="">
-				<a href="/profile">
-					<span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;
-					{{ request.user.username }}
-				</a>
-			</li>
-			{% else %}
-			<li class="">
-				<a href="/login">
-					<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
-					Login
-				</a>
-			</li>
-			{% endif %}
-		</ul>
+	<div class="container-fluid">
+		<!-- Header -->
+		<div class="navbar-header">
+			<button type ="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar brand" href="/home">Sudoku Solver</a>
+		</div>
+		<!-- Items -->
+		<div class="collapse navbar-collapse" id="topNavBar">
+			<ul class="nav navbar-nav">
+				<li class="active">
+					<a href="/new_game">
+						<span class="glyphicon glyphicon-play" aria-hidden="true"></span>&nbsp;
+							New game
+					</a>
+				</li>
+				<li class="">
+					<a href="/previous_games">
+						<span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp;
+						Previous games
+					</a>
+				</li>
+				{% if user.is_authenticated %}
+				<li class="">
+					<a href="/profile">
+						<span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;
+						{{ request.user.username }}
+					</a>
+				</li>
+				{% else %}
+				<li class="">
+					<a href="/login">
+						<span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;
+						Login
+					</a>
+				</li>
+				{% endif %}
+			</ul>
+		</div>
 	</div>
 </nav>
+
 <body>
 	{
 	<div id="content" name="content" class="main">
@@ -106,8 +109,8 @@
 			<div class="col-8">
 				<h1>
   					<a href="/home">
-						Sudoku Solver
-						<!--<img src="{% static 'main/logo.png' %}" alt="Tiffoox Sudoku Solver">-->
+
+						<img src="{% static 'main/logo_1.png' %}" alt="Tiffoox Sudoku Solver">
   					</a>
 				</h1>
 				<hr class="mt-0 mb-4">

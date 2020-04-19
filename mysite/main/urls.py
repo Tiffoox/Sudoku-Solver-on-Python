@@ -7,5 +7,6 @@ urlpatterns = [
     path('home/', views.home, name='home'),
     path('previous_games/', views.previous_games, name = 'solved'),
     path('new_game/', views.new_game, name = 'new game'),
-    path('profile/', views.profile, name = 'profile')
+    path('profile/', views.profile, name = 'profile'),
+    path('gameplay/', views.index, name='gameplay'),
 ]
