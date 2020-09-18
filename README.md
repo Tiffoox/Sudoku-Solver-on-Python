@@ -1,8 +1,4 @@
 # Sudoku-Solver-on-Python
-Create a Sudoku Solver on Python
+Create a Sudoku website with Django, including a Sudoku Solver.
 
-
-I also do this project for testing Git and GitHub. 
-
-
-This project will be object oriented. 
+This project is not finished yet... It allowed me to learn Django framework
